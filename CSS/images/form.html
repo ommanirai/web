@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+            border: 1px solid green;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        label {
+            width: 25%;
+            display: inline-block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        textarea,
+        select,
+        .custom-div {
+            width: 70%;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        input[type="file"] {
+            border: 1px solid black;
+        }
+
+        input[type="search"],
+        select {
+            width: 73%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .custom-gender,
+        .custom-skill {
+            display: inline;
+        }
+        
+        .custom-div{
+            display: inline-flex;
+            justify-content: space-between;
+        }
+        input[type="reset"],
+        input[type="submit"],
+        button{
+            padding: 10px;
+            background-color: skyblue;
+            border-radius: 7px;
+        }
+        .button{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register Here</h1>
+    <form target="_blank" action="datasave.html" method="post">
+        <label for="">username</label>
+        <input type="text">
+        <label for="email">email</label>
+        <input type="email" id="email" name="mero-email" placeholder="Enter Your Email Here">
+
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="mero-password" placeholder="Enter Your Password Here">
+
+        <label for="phone">phone number</label>
+        <input type="number" id="phone" name="mero-phone" placeholder="Enter Your Number">
+
+        <label for="">dob</label>
+
+        <input type="date">
+
+        <label for="">search</label>
+        <input type="search">
+
+        <label for="">file</label>
+        <input type="file">
+
+        <label for="">description</label>
+        <textarea name="" id="" cols="10" rows="4"></textarea>
+
+        <label for="">Gender</label>
+        <div class="custom-div">
+            <div>
+                <input type="radio" name="genders" id="male">
+                <label for="male" class="custom-gender">male</label>
+            </div>
+            <div>
+                <input type="radio" name="genders" id="female">
+                <label for="female" class="custom-gender">female</label>
+            </div>
+            <div>
+                <input type="radio" name="genders" id="others">
+                <label for="others" class="custom-gender">others</label>
+            </div>
+        </div>
+
+
+        <label for="skill">skill</label>
+        <div class="custom-div">
+            <input type="checkbox">
+            <label for="" class="custom-skill">HTML</label>
+            <input type="checkbox">
+            <label for="" class="custom-skill">css</label>
+            <input type="checkbox">
+            <label for="" class="custom-skill">javascript</label>
+        </div>
+
+
+        <label for="">country</label>
+        <select name="" id="">
+            <option value="">Choose Your Country</option>
+            <option value="nepal">Nepal</option>
+            <option value="india">India</option>
+            <option value="australia">Australia</option>
+            <option value="japan">Japan</option>
+            <option value="korea">Korea</option>
+            <option value="china">China</option>
+            <option value="usa">USA</option>
+        </select>
+        <div class="button">
+            <input type="reset">
+            <input type="submit" value="Register">
+            <button>click</button>
+        </div>
+
+    </form>
+</body>
+
+</html>

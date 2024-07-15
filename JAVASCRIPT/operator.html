@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>logical and conditional operator in js</h1>
+    <script>
+        /*
+        logical operator
+        a. logical and(&&)
+        condition1      condition2      result(condition1 && condition2)
+        true            true            true && true => true
+        true            false           true && false => false
+        false           true            false && true => false
+        false           false           false && false => false
+
+        b. logical or(||)
+        condition1      condition2      result(condition1 || condition2)
+        true            true            true || true => true
+        true            false           true || false => true
+        false           true            false || true => true
+        false           false           false || false => false
+
+        c. logical not(!)
+        condition1  result(!condition1)
+        true        !true => false
+        false       !false => true
+
+        */
+        var n1 = 23
+        var n2 = 12
+        var result = n1 < n2
+        var res = n1 > n2
+        //console.log('res is: ', res)
+        //console.log("result is: ", result)
+        console.log(result && res)
+        console.log(n1 < n2 && n1 > n2)
+        var citizenship = true
+        var age = 23
+        var check_validity = citizenship && age > 18
+        console.log(n1 < n2 || n1 > n2)
+
+        var a = true
+        console.log(!a)
+    </script>
+</body>
+
+</html>

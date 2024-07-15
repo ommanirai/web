@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator</title>
+    <style>
+        /*
+        combinator
+        types:
+        1. grouping combinator(,)
+        2. descendent combinator(selector)(space)
+        3. child combinator(>)
+        4. adjacent sibling combinator(+)
+        5. general sibling  combinator(~)
+        */
+        h1,
+        p,
+        .container {
+            color: red;
+        }
+
+        .parent div {
+            color: blue;
+        }
+
+        .parent>div {
+            color: yellowgreen;
+        }
+        .child+div{
+            background-color: red;
+        }
+        .child~div{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>heading first</h1>
+    <p>paragraph first</p>
+    <div class="container">division first</div>
+    <div>
+        <div class="parent">parent division
+            <div class="child">first child
+                <div class="grand-child">
+                    grand child
+                </div>
+            </div>
+            <div>second child</div>
+            <div>third child</div>
+            <div>fourth child</div>
+            <div>fifth child</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -8,18 +8,77 @@
 </head>
 
 <body>
-    <form target="_blank">
+    <form target="_blank" action="datasave.html" method="post">
+        <!-- url => uniform resource locater -->
+        <!-- type: text,email, password, number, submit, date, reset, file, search, radio, checkbox -->
         <label for="email">email</label>
-        <input type="text" id="email" placeholder="Enter Your Email Here">
+        <input type="email" id="email" name="mero-email" placeholder="Enter Your Email Here">
         <br>
         <br>
         <label for="password">password</label>
-        <input type="password" id="password" placeholder="Enter Your Password Here">
+        <input type="password" id="password" name="mero-password" placeholder="Enter Your Password Here">
         <br><br>
         <label for="phone">phone number</label>
-        <input type="number" id="phone" placeholder="Enter Your Number">
+        <input type="number" id="phone" name="mero-phone" placeholder="Enter Your Number">
         <br><br>
+        <label for="">dob</label>
+        <input type="date">
+        <br><br>
+        <label for="">search</label>
+        <input type="search">
+        <br><br>
+        <label for="">file</label>
+        <input type="file">
+        <br><br>
+        <label for="">description</label>
+        <textarea name="" id="" cols="10" rows="12"></textarea>
+        <textarea name="" id="" cols="100" rows="5" style="width: 729px; height: 129px;"></textarea>
+        <br><br>
+
+        <label for="">Gender</label>
+        <br>
+        <input type="radio" name="genders" id="male">
+        <label for="male">male</label>
+
+        <input type="radio" name="genders" id="female">
+        <label for="female">female</label>
+
+        <input type="radio" name="genders" id="others">
+        <label for="others">others</label>
+
+        <br><br>
+        <label for="skill">skill</label>
+        <br>
+        <input type="checkbox">
+        <label for="">HTML</label>
+        <input type="checkbox">
+        <label for="">css</label>
+        <input type="checkbox">
+        <label for="">javascript</label>
+        <br><br>
+
+        <label for="">country</label>
+        <select name="" id="">
+            <option value="">Choose Your Country</option>
+            <option value="nepal">Nepal</option>
+            <option value="india">India</option>
+            <option value="australia">Australia</option>
+            <option value="japan">Japan</option>
+            <option value="korea">Korea</option>
+            <option value="china">China</option>
+            <option value="usa">USA</option>
+        </select>
+        <br><br>
+
+
+
+        <!-- <label for="">Marital status</label> -->
+        <!-- married, unmarrid, divorced -->
+
+
+        <input type="reset">
         <input type="submit" value="Register">
+        <br><br>
     </form>
 </body>
 
