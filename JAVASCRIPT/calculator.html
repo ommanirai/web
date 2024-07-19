@@ -11,13 +11,22 @@
         var number1 = Number(prompt("enter first number"))
         var symbol = prompt("enter symbol")
         var number2 = Number(prompt('enter second number'))
-        if(symbol=='+'){
+
+        function add(){
             var sum = number1 + number2;
             console.log(sum)
         }
-        else if(symbol=="-"){
+
+        function substract(){
             var sub = number1 - number2;
             console.log(sub)
+        }
+
+        if(symbol=='+'){
+            add()
+        }
+        else if(symbol=="-"){
+            substract()
         }
         else if(symbol=="/"){
             var div = number1 / number2;
@@ -39,6 +48,8 @@
             console.log("invalid symbol")
             console.log("please check symbol and try again")
         }
+
+        
 
         /*
         subjects:

@@ -1,5 +1,5 @@
-console.log("run using node js")
-console.log("run js file using command")
+// console.log("run using node js")
+// console.log("run js file using command")
 // check node version/existence: 
 // node -v or node --version
 // command to run js file
@@ -100,3 +100,16 @@ do {
     i++
 } while (i <= 10)
 
+// for loop
+// count specific
+
+// while, do while loop
+// condition specific
+
+a = 1
+while(i<=10){
+    if(i==5){
+        console.log(i)
+        break;
+    }
+}
