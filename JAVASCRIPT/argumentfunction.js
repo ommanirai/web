@@ -18,22 +18,14 @@ function function_name(parameter1, parameter2, .....){
 // welcome("rejina", 'ktm')
 // welcome("hari", 'pkr')
 
-
-
-
-
 function welcome(details) {
     console.log("what comes in details: ", details)
     console.log("hi "+ details.name + " welcome to "+ details.address)
 }
-var details = {
+
+welcome({
     name:'ram',
-    address:'ktm',
     phone:'98242342343',
     email: 'ram@gmail.com',
     status:'active'
-}
-
-var det = ['ram', 'ktm', '9823234234', 'ram@gmal.com', 'active']
-
-welcome(details)  
+})  
