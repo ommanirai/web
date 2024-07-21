@@ -38,10 +38,10 @@ welcome()
 welcome()
 welcome()
 
-function sum() {
-    var n1 = 12
-    var n2 = 34
-    console.log(n1 + n2)
-}
+// function sum() {
+//     var n1 = 12
+//     var n2 = 34
+//     console.log(n1 + n2)
+// }
 
-sum()
+// sum()
