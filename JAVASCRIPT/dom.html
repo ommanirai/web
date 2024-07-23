@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <img src="" alt="demo image">
+    <h1 class="demo" id="container">document object model(DOM)</h1>
+    <h2 class="demo">hello</h2>
+    <p class="demo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde veritatis consequatur cum repellat
+        porro, dignissimos harum itaque rem necessitatibus excepturi reiciendis autem est vel dolor obcaecati deleniti,
+        inventore voluptas ducimus!</p>
+    <script>
+        /*
+        dom
+        method and properties
+        
+        */
+        //document.querySelector("h2").setAttribute("id", "random")
+        document.querySelector('h2').id = "random"
+
+
+
+        document.getElementsByClassName("demo")[0].style.fontSize = "100px" 
+        document.getElementById("container").style.backgroundColor = "purple"
+        //document.querySelector("#container")
+        console.log("document is: ", document)
+        document.querySelector('h2').innerHTML = "hi from javascript"
+        document.querySelector("h1").innerHTML = "goood morning"
+        var body = document.body
+        var div = document.createElement("div")
+        body.append(div)
+        document.querySelector("div").innerHTML = "hi guys"
+        //document.querySelector(".demo").style.color = 'red'
+
+        var selectedclasses = document.querySelectorAll(".demo")
+        selectedclasses.forEach(function (item, index) {
+            item.style.color = 'green'
+        })
+    </script>
+</body>
+
+</html>
+
+<!-- 
+                                html
+                        head                 body
+                title       meta        h1  p   div span
+
+
+
+-->
