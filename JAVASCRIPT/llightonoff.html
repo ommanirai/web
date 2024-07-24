@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- switch 
+         => on => light on
+         => off => light off
+        -->
+    <img id="off" src="https://imgs.search.brave.com/n9k1uhat9Y_ItxLDSfiCsjYYKTd3JRs3Ks94tuayKRk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM3LzAyLzc3/LzM2MF9GXzgzNzAy/NzcxNF9PUjR1blZN/UWRXV0dMRGdSVUNp/bmlYdEZLelBzMmRi/UC5qcGc" alt="" width="300px" height="300px">
+    <button onclick="lighton()">light on</button>
+    <button onclick="lightoff()">light off</button>
+
+    <script>
+        function lightoff(){
+            document.getElementById("off").src = "https://imgs.search.brave.com/n9k1uhat9Y_ItxLDSfiCsjYYKTd3JRs3Ks94tuayKRk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM3LzAyLzc3/LzM2MF9GXzgzNzAy/NzcxNF9PUjR1blZN/UWRXV0dMRGdSVUNp/bmlYdEZLelBzMmRi/UC5qcGc"
+        }
+
+        function lighton(){
+            document.getElementById("off").src = "https://imgs.search.brave.com/UI02kxxOr5mbYHonOxCppQi4VYKjQAncjs8rwAGKsVw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2xhcmdlLXByZXZp/ZXdzLzcwYS9saWdo/dC1idWxiLTEtMTQy/NzUwMi5qcGc_Zm10"
+        }
+    </script>
+</body>
+</html>
