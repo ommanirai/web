@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>event in html</h1>
+    <input type="text" id="data" onkeyup="handleChange()">
+    <!-- <input type="text" id="data" onchange="handleChange()"> -->
+    <div id="container"></div>
+    <button onclick="changeme()">click me</button>
+    <button onmouseover="changebg()">change me</button>
+    <button onmouseout="changebackground()">change me</button>
+
+    <script>
+        function handleChange(){
+            var data = document.getElementById("data").value
+            document.getElementById("container").innerHTML = data
+        }
+
+        function changeme() {
+            document.getElementById("container").style.backgroundColor = 'yellow'
+            document.getElementById("container").innerHTML = "hi from javascript"
+        }
+        function changebg(){
+            document.getElementById("container").style.backgroundColor = "black"
+        }
+        function changebackground(){
+            document.getElementById("container").style.backgroundColor = "red"
+        }
+    </script>
+</body>
+
+</html>

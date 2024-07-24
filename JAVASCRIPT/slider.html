@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        div {
+            width: 50%;
+            height: 500px;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 500px;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 42%;
+            color: rgb(8, 7, 7);
+            cursor: pointer;
+            font-size: 36px;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .left:hover,
+        .right:hover {
+            top: 39%;
+            color: aqua;
+            font-size: 45px;
+        }
+
+        .slider {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <img src="https://imgs.search.brave.com/rTTdR2Cb4DXYB0G1bDY5kDBUbIOX8j66BH1jCie8vVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YXRj/aGJveC1wcm9kdWN0/LWNkbi5pbWdpeC5u/ZXQvbmV3LWdvb2Rz/L0NSV1NUQTAwNDFf/Mi5qcGc_YXV0bz1m/b3JtYXQsY29tcHJl/c3MmYmctcmVtb3Zl/PXRydWUmdz0xNDgw/Jmg9MTQ4MCZmaXQ9/ZmlsbCZmaWxsPXNv/bGlkJnE9MTAw"
+            alt="" id="image">
+        <p class="left" onclick="previous()">&lt;</p>
+        <p class="right" onclick="next()">&gt;</p>
+
+
+        <script>
+            var images = [
+                'https://imgs.search.brave.com/TZHIbbag5Zed3qOhAIa9fpwY1Pq9s_e7wteH5l4N2N4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nb3Zi/ZXJnLXNmY2MuaW1n/aXgubmV0L3Bvc3Rl/ZC1wcm9kdWN0LWlt/YWdlcy8yMDctMjA0/M19TQkdSMzIxLmpw/Zz9hdXRvPWZvcm1h/dCxjb21wcmVzcyZi/Zy1yZW1vdmU9dHJ1/ZSZ3PTE0ODAmaD0x/NDgwJmZpdD1maWxs/JmZpbGw9c29saWQm/cT0xMDA',
+
+                'https://imgs.search.brave.com/3pJBHVwHbIchyo7EPlEc4LXMouQBmEamg7QO-4lpG50/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFTcWpFSDN4a0wu/anBn',
+
+                'https://imgs.search.brave.com/XrzuEnq4G7P1I8imLklJsbHPqgXLiZ87H3peulbO1z8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YXRj/aGJveC1wcm9kdWN0/LWNkbi5pbWdpeC5u/ZXQvbmV3LWdvb2Rz/L0wzLjc4NC40LjU2/LjkuanBnP2F1dG89/Zm9ybWF0LGNvbXBy/ZXNzJmJnLXJlbW92/ZT10cnVlJnc9MTQ4/MCZoPTE0ODAmZml0/PWZpbGwmZmlsbD1z/b2xpZCZxPTEwMA',
+
+                'https://imgs.search.brave.com/9Qf9WY1_59EKTk_pSZavwltZnKMpI7pBrDCoqY0uYI8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mb3Nz/aWwuc2NlbmU3LmNv/bS9pcy9pbWFnZS9G/b3NzaWxQYXJ0bmVy/cy9GUzYwNDJfbWFp/bj8kc2ZjY19mb3Nf/bWVkaXVtJA',
+
+                'https://imgs.search.brave.com/k1kwxuu6wN-gSJaRKglEDiiY0J2M9FspV-tjq__y5wg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFsQWh1cHJqaUwu/anBn'
+            ]
+            images.push('https://imgs.search.brave.com/coUqLyKxmVBIwFNOEBRdyN26o0Vv_eGKzZQSImy-OoI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTcy/MzgwMTQ2L3Bob3Rv/L2dvbGQtd2F0Y2gu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PS1kN2xENzNqcnhD/MV9BWWhSbnk4SGZ4/R0podjdpRmZlbzZN/ZXZWdFY0d0k9')
+            
+            var index = 0
+            function next() {
+                document.getElementById("image").src = images[index]
+                index++
+                if (index == images.length) {
+                    index = 0
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
