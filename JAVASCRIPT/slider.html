@@ -74,6 +74,14 @@
                     index = 0
                 }
             }
+
+            function previous(){
+                document.getElementById("image").src = images[index]
+                index--
+                if(index < 0){
+                    index = images.length - 1
+                }
+            }
         </script>
         
     </div>
