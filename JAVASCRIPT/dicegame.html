@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        .game {
+            display: flex;
+            width: 75%;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <div>
+            <h1>Player One</h1>
+            <img src="images/face1.png" id="player-one" alt="" width="400px" height="400px">
+        </div>
+        <div>
+            <h1>Player Two</h1>
+            <img src="images/face1.png" id="player-two" alt="" width="400px" height="400px">
+        </div>
+    </div>
+    <div class="button">
+        <h1 id="result">Result:</h1>
+        <button onclick="playGame()">Play Game</button>
+    </div>
+    <script>
+        var faces = ['images/face1.png', 'images/face2.png', 'images/face3.png', 'images/face4.png', 'images/face5.png', 'images/face6.png']
+
+        function playGame() {
+
+            // 0-5
+            var number1 = Math.random() * 5 // 0-1
+            //document.write(number1.toFixed(0))
+            //document.write(Math.floor(number1))
+            number1 = Math.floor(number1)
+
+            var number2 = Math.random() * 5
+            number2 = Math.floor(number2)
+
+            //document.write(number1, number2)
+            document.getElementById("player-one").src = faces[number1]
+            document.getElementById("player-two").src = faces[number2]
+
+            if(number1> number2){
+                document.getElementById("result").innerHTML = "Player One Win the Game!!!"
+            }
+            else if(number2 > number1){
+                document.getElementById("result").innerHTML = "Player Two Win the Game!!!"
+            }
+            else{
+                document.getElementById("result").innerHTML = "Draw Game!!!"
+            }
+        }
+    </script>
+</body>
+
+</html>
